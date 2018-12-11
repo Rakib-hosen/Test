@@ -1,7 +1,10 @@
 import java.awt.FlowLayout;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
+
+import javax.swing.JButton;
 import javax.swing.JFrame;
+import javax.swing.JLabel;
 import javax.swing.JTextField;
 import javax.swing.JPasswordField;
 import javax.swing.JOptionPane;
@@ -19,23 +22,33 @@ public class Eventhand extends JFrame {
 		super("Event handaling");
 		setLayout(new FlowLayout());
 		
+		JLabel label1=new JLabel("UserName");
+		add(label1);
+		
+		
 		item1 = new JTextField(10);
 		add(item1);
 		
-		item2 = new JTextField("enter text here");
-		add(item2);
+		JLabel label2=new JLabel("PassWord");
+		add(label2);
 		
-		item3 = new JTextField("Uneditable",20);
-		item3.setEditable(false);
-		add(item3);
+//		item2 = new JTextField("enter text here");
+//		add(item2);
+		
+//		item3 = new JTextField("Uneditable",20);
+//		item3.setEditable(false);
+//		add(item3);
 		
 		passwordField = new JPasswordField("My password");
 		add(passwordField);
 		
+		JButton button1= new JButton("Log in");
+		add(button1);
+		
 		thehandler handler = new thehandler();
 		item1.addActionListener(handler);
-		item2.addActionListener(handler);
-		item3.addActionListener(handler);
+		//item2.addActionListener(handler);
+		//item3.addActionListener(handler);
 		passwordField.addActionListener(handler);
 		
 		
@@ -51,11 +64,11 @@ public class Eventhand extends JFrame {
 			if(event.getSource()==item1)
 				string=String.format("field 1: %s",event.getActionCommand());
 			
-			else if(event.getSource()==item2)
-				string=String.format("field 2: %s",event.getActionCommand());
+//			else if(event.getSource()==item2)
+//				string=String.format("field 2: %s",event.getActionCommand());
 			
-			else if(event.getSource()==item1)
-				string=String.format("field 3: %s",event.getActionCommand());
+//			else if(event.getSource()==item1)	
+//				string=String.format("field 3: %s",event.getActionCommand());
 			
 			else if (event.getSource()==passwordField)
 				string=String.format("passwordField is : %s",event.getActionCommand());

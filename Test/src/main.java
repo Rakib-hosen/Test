@@ -12,12 +12,6 @@ public class main {
 		e.setVisible(true);
 		
 		
-		homepage w = new homepage();
-		w.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
-		w.setSize(480,300);
-		w.setVisible(true);
-		
-		
 	}
 
 }
